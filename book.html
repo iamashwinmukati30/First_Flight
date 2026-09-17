@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip</title>
+    <link rel="icon" href="./files/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body class="register-body">
+
+    <nav>
+        <img src="./files/logo.png" class="logo" alt="Logo" title="FirstFlight Travels">
+
+        <ul class="navbar">
+            <li>
+                <a href="./index.html">Home</a>
+                <a href="./index.html#locations">Locations</a>
+                <a href="./index.html#package">Packages</a>
+                <a href="./about.html">About Us</a>
+                <a href="./contact.html">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="registration">
+        <div class="register-form">
+            <h1>Book Your <span>Trip</span></h1>
+            <form action="#" onsubmit="return validateform(event)">
+
+                <div class="form-section-title"><span>01</span> Personal Information</div>
+                
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label for="reg-name">Full Name</label>
+                        <div class="input-wrapper">
+                            <input type="text" name="myname1" id="reg-name" placeholder="Enter your name" required>
+                            <i class='bx bx-user'></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group half-width">
+                        <label for="reg-phone">Phone Number</label>
+                        <div class="input-wrapper">
+                            <input type="tel" name="myphone" id="reg-phone" placeholder="+91 00000 00000" required>
+                            <i class='bx bx-phone'></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-email">Email Address</label>
+                    <div class="input-wrapper">
+                        <input type="email" name="myemail" id="reg-email" placeholder="example@mail.com" required>
+                        <i class='bx bx-envelope'></i>
+                    </div>
+                </div>
+
+
+                <div class="form-section-title"><span>02</span> Travel Details</div>
+                
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label for="departure">Departure Date</label>
+                        <div class="input-wrapper">
+                            <input type="datetime-local" name="departuredate" id="departure" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group half-width">
+                        <label for="return">Return Date</label>
+                        <div class="input-wrapper">
+                            <input type="datetime-local" name="returndate" id="return" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Select Your Destinations</label>
+                    <div class="destination-grid">
+                        <label class="dest-card">
+                            <input type="checkbox" name="td" value="kashmir">
+                            <div class="card-content">Kashmir</div>
+                        </label>
+                        <label class="dest-card">
+                            <input type="checkbox" name="td" value="istanbul">
+                            <div class="card-content">Istanbul</div>
+                        </label>
+                        <label class="dest-card">
+                            <input type="checkbox" name="td" value="paris">
+                            <div class="card-content">Paris</div>
+                        </label>
+                        <label class="dest-card">
+                            <input type="checkbox" name="td" value="bali">
+                            <div class="card-content">Bali</div>
+                        </label>
+                        <label class="dest-card">
+                            <input type="checkbox" name="td" value="dubai">
+                            <div class="card-content">Dubai</div>
+                        </label>
+                        <label class="dest-card">
+                            <input type="checkbox" name="td" value="geneva">
+                            <div class="card-content">Geneva</div>
+                        </label>
+                        <label class="dest-card">
+                            <input type="checkbox" name="td" value="port-blair">
+                            <div class="card-content">Port Blair</div>
+                        </label>
+                        <label class="dest-card">
+                            <input type="checkbox" name="td" value="rome">
+                            <div class="card-content">Rome</div>
+                        </label>
+                        <label class="dest-card">
+                            <input type="checkbox" name="td" value="tokyo">
+                            <div class="card-content">Tokyo</div>
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="form-section-title"><span>03</span> Select Package</div>
+                <div class="form-group">
+                    <div class="package-grid">
+                        <label class="package-card">
+                            <input type="radio" name="package" value="bronze" required>
+                            <div class="card-content">
+                                <i class='bx bx-shield'></i>
+                                <span>Bronze</span>
+                            </div>
+                        </label>
+                        <label class="package-card">
+                            <input type="radio" name="package" value="silver">
+                            <div class="card-content">
+                                <i class='bx bx-check-shield'></i>
+                                <span>Silver</span>
+                            </div>
+                        </label>
+                        <label class="package-card">
+                            <input type="radio" name="package" value="gold">
+                            <div class="card-content">
+                                <i class='bx bx-medal'></i>
+                                <span>Gold</span>
+                            </div>
+                        </label>
+                        <label class="package-card">
+                            <input type="radio" name="package" value="platinum">
+                            <div class="card-content">
+                                <i class='bx bx-crown'></i>
+                                <span>Platinum</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-top: 30px;">
+                    <label class="t-c">
+                        <input type="checkbox" name="t&c" required>
+                        <div class="t-c-text">I accept the Terms & Conditions.</div>
+                    </label>
+                </div>
+
+                <input type="submit" value="Confirm Booking" class="submitbtn">
+            </form>
+        </div>
+    </main>
+
+        <!-- Footer -->
+    <section class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="./files/logo.png" alt="FirstFlight Travels Logo">
+                <p>Your journey begins here. Experience the world's most beautiful destinations with ultimate luxury and comfort.</p>
+            </div>
+            
+            <div class="footlinks">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#locations">Locations</a></li>
+                    <li><a href="./index.html#package">Packages</a></li>
+                </ul>
+            </div>
+
+            <div class="footlinks">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contact Support</a></li>
+                    <li><a href="./book.html">Book Now</a></li>
+                </ul>
+            </div>
+
+            <div class="footlinks">
+                <h4>Connect</h4>
+                <div class="social">
+                    <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="end">
+            <p>Built by: Ashwin Mukati</p>
+            <p>Copyright © 2026 FirstFlight Travels. All Rights Reserved.</p>
+        </div>
+    </section>
+
+    <script>
+        function validateform(event) {
+            event.preventDefault();
+
+
+            const name = document.getElementById('reg-name').value.trim();
+            const email = document.getElementById('reg-email').value.trim();
+            const phone = document.getElementById('reg-phone').value.trim();
+            const departure = document.getElementById('departure').value;
+            const returndate = document.getElementById('return').value;
+
+            if (!name || !email || !phone || !departure || !returndate) {
+                alert('Please fill in all required fields!');
+                return false;
+            }
+
+
+            alert('Booking Confirmed! Thank you for choosing FirstFlight Travels.');
+
+
+            const form = document.querySelector('.register-form form');
+            form.reset();
+
+            return false;
+        }
+    </script>
+</body>
+
+</html>
